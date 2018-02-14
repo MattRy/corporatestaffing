@@ -780,7 +780,8 @@ th {
 	font-size: 24px;
 }
 
-.content .post .entry-title {
+.content .post .entry-title,
+.content .job_posting .entry-title  {
 	margin-bottom: 0;
 }
 
@@ -2208,19 +2209,10 @@ tr.acf-field.one-half {
 --------------------------------------------- */
 
 .content .post .entry-header,
-article.job_posting.type-job_posting > header > h2 {
-	border-bottom: 1px solid #d7cabc;
-	margin-bottom: 20px;
+.content .job_posting .entry-header  {
+    border-bottom: 1px solid #d7cabc;
+    margin-bottom: 20px;
 }
-
-/* article.job_posting.type-job_posting > header > p {
-	border-bottom: 1px solid #d7cabc;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-} */
-/* article.job_posting.type-job_posting > header > h2 {
-	margin-bottom: 0;
-} */
 
 .home .content .post .entry-header {
 	border: 0;

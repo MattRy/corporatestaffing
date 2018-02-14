@@ -237,12 +237,14 @@ function wsm_output_category_info() {
 }
 
 // Remove Post Info from Archive Pages
+// Includes category, tags, old jobs, new job_posting cpt
+// Commented out per TKT 1413 - 02/2018 to add date back in. 
 function wsm_remove_post_meta() {
 	if (is_archive()) {
 		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 		}
 }
-add_action ( 'genesis_entry_header', 'wsm_remove_post_meta' );
+// add_action ( 'genesis_entry_header', 'wsm_remove_post_meta' );
 
 // Add page title to blog page template
 add_action( 'genesis_before', 'wsm_blog_page_title' );
