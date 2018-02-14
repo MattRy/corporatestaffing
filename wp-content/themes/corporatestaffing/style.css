@@ -2207,19 +2207,20 @@ tr.acf-field.one-half {
 /* ## Entry Meta
 --------------------------------------------- */
 
-.content .post .entry-header {
+.content .post .entry-header,
+article.job_posting.type-job_posting > header > h2 {
 	border-bottom: 1px solid #d7cabc;
 	margin-bottom: 20px;
 }
 
-article.job_posting.type-job_posting > header > p {
+/* article.job_posting.type-job_posting > header > p {
 	border-bottom: 1px solid #d7cabc;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
-}
-article.job_posting.type-job_posting > header > h2 {
+} */
+/* article.job_posting.type-job_posting > header > h2 {
 	margin-bottom: 0;
-}
+} */
 
 .home .content .post .entry-header {
 	border: 0;
