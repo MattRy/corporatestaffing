@@ -429,3 +429,26 @@ function wsm_custom_post_meta( $atts ) {
 	// Allow a filter to change the default output and the shortcode attributes/arguments
 	return apply_filters( 'wsm_custom_post_meta', $output, $atts );
 }
+
+// Add series of widget areas to hold embedded posts for job archive page. 
+genesis_register_sidebar( array(
+	'id'			=> 'job-page-content-ad-1',
+	'name'			=> __( 'Job Archive Page Content Intermixed Ad 1', 'wsm' ),
+	'description'	=> __( 'This is the Job Archive Page Content Intermixed Ad Space 1 - for blog post. Displayed after 3rd post.', 'wsm' ),
+	'before_title' => '<h2 class="widget-title widgettitle">',
+    'after_title' => '</h2>',
+) );
+genesis_register_sidebar( array(
+	'id'			=> 'job-page-content-ad-2',
+	'name'			=> __( 'Job Archive Page Content Intermixed Ad 2', 'wsm' ),
+	'description'	=> __( 'This is the Job Archive Page Content Intermixed Ad Space 2 - for blog post. Displayed after 5th post.', 'wsm' ),
+	'before_title' => '<h2 class="widget-title widgettitle">',
+    'after_title' => '</h2>',
+) );
+genesis_register_sidebar( array(
+	'id'			=> 'job-page-content-ad-3',
+	'name'			=> __( 'Job Archive Page Content Intermixed Ad 3', 'wsm' ),
+	'description'	=> __( 'This is the Job Archive Page Content Intermixed Ad Space 3 - for blog post. Displayed after 8th post.', 'wsm' ),
+	'before_title' => '<h2 class="widget-title widgettitle">',
+    'after_title' => '</h2>',
+) );

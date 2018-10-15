@@ -2665,6 +2665,22 @@ li.comment {
 }
 
 
+/* ## Job Posting Widget Ads
+--------------------------------------------- */
+
+.job-page-content-ad {
+    border: 1px solid #C6C8CA;
+    margin-bottom: 20px;
+    padding: 5px 0 20px 5px;
+}
+
+div.embedded-posts-title {
+    padding: 0 0 10px 5px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+
 /* # Sidebars
 ---------------------------------------------------------------------------------------------------- */
 

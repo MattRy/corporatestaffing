@@ -12,6 +12,7 @@
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_loop', 'wsm_css_custom_loop' );
+add_action( 'genesis_after_entry', 'wsm_job_archive_page_blog_widgets' );
 /**
  * Attach a loop to the `genesis_loop` output hook so we can get some front-end output of blog to include our custom post type.
  *
@@ -35,4 +36,32 @@ function wsm_css_custom_loop() {
 
 	genesis_custom_loop( $query_args );
 }
+
+/**
+ * Job Archive Widgets
+ *
+ * Add widget areas to Job Archive page for display category specific blog posts.
+ *
+ */
+function wsm_job_archive_page_blog_widgets() {
+
+	global $wp_query;
+	if ( 2 == $wp_query->current_post ) {   //* Dump it out after the 3rd post
+		genesis_widget_area( 'job-page-content-ad-1', array(
+			'before' => '<div class="job-page-content-ad">',
+			'after'  => '</div>',
+		) );
+	} elseif ( 5 == $wp_query->current_post ) {  //* Dump it out after the 6th post
+		genesis_widget_area( 'job-page-content-ad-2', array(
+			'before' => '<div class="job-page-content-ad clearfix">',
+			'after'  => '</div>',
+		) );
+	} elseif ( 8 == $wp_query->current_post ) {  //* Dump it out after the 9th post
+		genesis_widget_area( 'job-page-content-ad-3', array(
+			'before' => '<div class="job-page-content-ad clearfix">',
+			'after'  => '</div>',
+		) );
+	}
+}
+
 genesis();
